@@ -1,0 +1,105 @@
+
+class CInterfaceSystem {
+public:
+	bool Initialize();
+
+	ISchemaSystem* gSchemaSystem = nullptr;
+
+
+private:
+	template<typename T>
+	static T* GetInterface(const char* module_name, const char* interface_name);
+	void DumpInterfaces();
+
+    HMODULE GetModuleHandleSafe(const char* moduleName);
+
+    std::vector<std::string> modules = {
+        "client.dll",
+        "server.dll",
+        "host.dll",
+        "matchmaking.dll",
+        "amd_ags_x64.dll",
+        "animationsystem.dll",
+        "assetpreview.dll",
+        "ati_compress_wrapper.dll",
+        "bugreporter_filequeue.dll",
+        "cairo.dll",
+        "d3dcompiler_47.dll",
+        "dbghelp.dll",
+        "embree3.dll",
+        "engine2.dll",
+        "filesystem_stdio.dll",
+        "gfsdk_aftermath_lib.x64.dll",
+        "helpsystem.dll",
+        "icui18n.dll",
+        "icuuc.dll",
+        "imemanager.dll",
+        "inputsystem.dll",
+        "libavcodec-58.dll",
+        "libavformat-58.dll",
+        "libavresample-4.dll",
+        "libavutil-56.dll",
+        "libfbxsdk_2020_3_1.dll",
+        "libfontconfig-1.dll",
+        "libfreetype-6.dll",
+        "libglib-2.0-0.dll",
+        "libgmodule-2.0-0.dll",
+        "libgobject-2.0-0.dll",
+        "libgthread-2.0-0.dll",
+        "libmpg123-0.dll",
+        "libpango-1.0-0.dll",
+        "libpangoft2-1.0-0.dll",
+        "libswscale-5.dll",
+        "localize.dll",
+        "materialsystem2.dll",
+        "meshsystem.dll",
+        "navsystem.dll",
+        "networksystem.dll",
+        "nvlowlatencyvk.dll",
+        "p4lib.dll",
+        "panorama.dll",
+        "panoramauiclient.dll",
+        "panorama_text_pango.dll",
+        "particles.dll",
+        "phonon.dll",
+        "phonon4.dll",
+        "physicsbuilder.dll",
+        "propertyeditor.dll",
+        "pulse_system.dll",
+        "Qt5Concurrent.dll",
+        "Qt5Core.dll",
+        "Qt5Gui.dll",
+        "Qt5Widgets.dll",
+        "rendersystemdx11.dll",
+        "rendersystemempty.dll",
+        "rendersystemvulkan.dll",
+        "resourcecompiler.dll",
+        "resourcesystem.dll",
+        "scenefilecache.dll",
+        "scenesystem.dll",
+        "schemasystem.dll",
+        "SDL3.dll",
+        "soundsystem.dll",
+        "steamaudio.dll",
+        "steamnetworkingsockets.dll",
+        "steam_api64.dll",
+        "symsrv.dll",
+        "tier0.dll",
+        "toolframework2.dll",
+        "v8.dll",
+        "v8system.dll",
+        "v8_libbase.dll",
+        "v8_libplatform.dll",
+        "v8_zlib.dll",
+        "valve_avi.dll",
+        "valve_wmf.dll",
+        "vconcomm.dll",
+        "vfx_dx11.dll",
+        "video64.dll",
+        "visbuilder.dll",
+        "vphysics2.dll",
+        "vscript.dll",
+        "worldrenderer.dll"
+    };
+
+};
